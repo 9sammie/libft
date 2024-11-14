@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:10:25 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/14 18:04:36 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/14 18:06:07 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
     }
     return(0);
 }
-
+/*
 int main()
 {
     const char big[] = "bonjoure";
@@ -49,3 +49,4 @@ int main()
     printf("func: %s\nMine: %s\n", strnstr(big, little, len), ft_strnstr(big, little, len));
     return(0);
 }
+*/
