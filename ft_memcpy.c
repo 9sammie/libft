@@ -6,30 +6,32 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:12:29 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/18 17:17:00 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 19:00:45 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    size_t i;
-    unsigned char *s;
-    unsigned char *d;
+	size_t			i;
+	unsigned char	*s;
+	unsigned char	*d;
 
-    i = 0;
-    s = (unsigned char *)src;
-    d = (unsigned char *)dest;
-    // if(d[i] == 0 || s[i] == 0)
-    //     return(0);
-    while (i < n)
-    {
-        d[i] = s[i]; // alt version : *(unsigned char *) (s + i);
-        i++;
-    }
-    return(dest);
+	i = 0;
+	s = (unsigned char *)src;
+	d = (unsigned char *)dest;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dest);
 }
+
+	//if(d[i] == 0 || s[i] == 0)
+	//	return(0);
+
 /*
 int main()
 {

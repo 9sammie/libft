@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 17:57:02 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/14 14:29:14 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 19:08:05 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen((char *)src);
 	i = 0;
-	if(dest_len >= size)
+	if (dest_len >= size)
 		return (size + src_len);
 	while (src[i] != 0 && dest_len + i < size - 1)
 	{

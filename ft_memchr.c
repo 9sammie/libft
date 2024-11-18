@@ -6,27 +6,26 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:55:35 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/18 17:49:14 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 18:55:43 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    size_t  i;
-    unsigned char   *str;
+	size_t			i;
+	unsigned char	*str;
 
-    i = 0;
-    str = (unsigned char *)s;
-    if(n == 0 || c == '\0' || str[i] == '\0')
-        return(NULL);
-    while(str[i] != (unsigned char)c && str[i] && i < n)
-        i++;
-    if(str[i] == (unsigned char)c)
-        return((char *)s + i);
-    else
-    return((void *)s);
+	i = 0;
+	str = (unsigned char *)s;
+	if (n == 0 || c == '\0' || str[i] == '\0')
+		return (NULL);
+	while (str[i] != (unsigned char)c && str[i] && i < n)
+		i++;
+	if (str[i] == (unsigned char)c)
+		return ((char *)s + i);
+	return ((void *)s);
 }
 /*
 int main()

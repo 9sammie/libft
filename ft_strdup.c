@@ -6,27 +6,27 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:42:41 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/18 16:06:57 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 19:07:51 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    int i;
-    char    *dup;
+	int		i;
+	char	*dup;
 
-    i = 0;
-    dup = malloc(ft_strlen((char *)s));
-    if(dup == NULL)
-        return (NULL);
-    while(i < ft_strlen((char *)s))
-    {
-        dup[i] = s[i];
-        i++;
-    }
-    return(dup);
+	i = 0;
+	dup = malloc(ft_strlen((char *)s));
+	if (dup == NULL)
+		return (NULL);
+	while (i < ft_strlen((char *)s))
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	return (dup);
 }
 /*
 int main()

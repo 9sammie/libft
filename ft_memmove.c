@@ -6,34 +6,34 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:12:29 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/18 18:03:21 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 19:02:42 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-    size_t i;
-    const unsigned char *s;
-    unsigned char *d;
+	size_t				i;
+	const unsigned char	*s;
+	unsigned char		*d;
 
-    i = 0;
-    s = (unsigned char *)src;
-    d = (unsigned char *)dest;
-    if(d[i] == '\0' || s[i] == '\0')
-        return(0);
-    while(i < n)
-    {
-        if(d > s)
-            d[n - (i + 1)] = s[n - (i + 1)];
-        else
-            d[i] = s[i];
-        i++;
-    }
-    return(dest);
+	i = 0;
+	s = (unsigned char *)src;
+	d = (unsigned char *)dest;
+	if (d[i] == '\0' || s[i] == '\0')
+		return (0);
+	while (i < n)
+	{
+		if (d > s)
+			d[n - (i + 1)] = s[n - (i + 1)];
+		else
+			d[i] = s[i];
+		i++;
+	}
+	return (dest);
 }
-    /*    long version :
+/*	long version :
 
     if(d > s)
     {
