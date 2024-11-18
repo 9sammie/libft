@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:42:41 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/15 16:52:58 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 16:06:57 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char    *ft_strdup(const char *s)
     }
     return(dup);
 }
-
+/*
 int main()
 {
     const char  s[] = "bonjour";
@@ -37,3 +37,4 @@ int main()
     printf("mine: %s\n", ft_strdup(s));
     return(0);
 }
+*/

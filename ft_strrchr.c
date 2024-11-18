@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maballet <maballet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:57:50 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/12 15:55:34 by maballet         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:11:40 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-//#include <string.h>
 
 char    *ft_strrchr(const char *s, int c)
 {
@@ -21,11 +19,12 @@ char    *ft_strrchr(const char *s, int c)
     lenth = 0;
     while(s[lenth])
         lenth++;
-    while(s[lenth] != (unsigned char)c)
+    while(lenth >= 0)
+    {
+        if(s[lenth] == (char)c)
+            return((char *)s + lenth);
         lenth--;
-    if(s[lenth] == (unsigned char)c)
-        return((char *)s + lenth);
-    else
+    }
     return(NULL);
 }
 /*

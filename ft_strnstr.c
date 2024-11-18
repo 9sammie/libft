@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:10:25 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/14 18:06:07 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 18:02:43 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,21 @@
 
 char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
-    size_t i;
-    size_t l;
-    char    *large;
-    char    *mini;
+    size_t	i;
+    size_t	l;
+	size_t	n;
 
-    large = (char *)big;
-    mini = (char *)little;
     i = 0;
     l = 0;
-    if(mini[i] == 0)
-        return(large);
-    while(large[i] && i < len)
+	n = ft_strlen((char*)little);
+    if(little[i] == 0)
+        return((char*)big);
+    while(big[i] && i < len)
     {
-        while(large[i + l] == mini[l] && l < ft_strlen(mini))
-        {
+        while(big[i + l] == little[l] && l < n && i + l < len)
             l++;
-        }
-        if(l == ft_strlen(mini))
-            return(&large[i]);
+        if(l == n)
+            return((char*)&big[i]);
         else
             l = 0;
         i++;
@@ -43,8 +39,8 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
 int main()
 {
     const char big[] = "bonjoure";
-    const char little[] = "jour";
-    size_t len = 9;
+    const char little[] = "bonjoureuh";
+    size_t len = 10;
 
     printf("func: %s\nMine: %s\n", strnstr(big, little, len), ft_strnstr(big, little, len));
     return(0);

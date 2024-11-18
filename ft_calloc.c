@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:36:01 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/15 16:37:23 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/18 18:01:24 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void    *ft_calloc(size_t nmemb, size_t size)
     void *array;
 
     i = 0;
-    if(nmemb * size == 0 || size * nmemb / size != nmemb)
-        return (0);
+    if(size * nmemb / size != nmemb)
+        return (NULL);
     array = malloc(size * nmemb);
     if(array == NULL)
-        return (0);
-    ft_bzero(array, size);
+        return (NULL);
+    ft_bzero(array, size * nmemb);
     return (array);
 }
 /*
@@ -32,8 +32,8 @@ int main()
     size_t nmemb;
     size_t size;
 
-    nmemb = 6;
-    size = 0;
+    nmemb = 5;
+    size = 3;
     printf("true: %p\n", calloc(nmemb, size));
     printf("mine: %p\n", ft_calloc(nmemb, size));
     return(0);
