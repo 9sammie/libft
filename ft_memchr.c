@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:55:35 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/18 18:55:43 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 15:08:25 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,24 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	str = (unsigned char *)s;
-	if (n == 0 || c == '\0' || str[i] == '\0')
-		return (NULL);
-	while (str[i] != (unsigned char)c && str[i] && i < n)
+	while (i < n)
+	{
+		if (str[i] == (unsigned char) c)
+		{
+			return (&str[i]);
+		}
 		i++;
-	if (str[i] == (unsigned char)c)
-		return ((char *)s + i);
-	return ((void *)s);
+	}
+	return (NULL);
 }
-/*
-int main()
-{
-    size_t n = 5;
-    int c = 'a';
-    const   char s[] = "";
 
-    printf("ori : %p\n", memchr(s, c, n));
-    printf("mine: %p\n", ft_memchr(s, c, n));
-    return(0);
-}
-*/
+// int main()
+// {
+//     size_t n = 5;
+//     int c = 'j';
+//     const   char s[] = "bonjour";
+
+//     printf("ori : %p\n", memchr(s, c, n));
+//     printf("mine: %p\n", ft_memchr(s, c, n));
+//     return(0);
+// }

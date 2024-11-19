@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:12:29 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/18 19:00:45 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/19 13:06:44 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	s = (unsigned char *)src;
 	d = (unsigned char *)dest;
+	if (!dest && !src)
+		return (NULL);
 	while (i < n)
 	{
 		d[i] = s[i];
@@ -28,15 +30,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-	//if(d[i] == 0 || s[i] == 0)
-	//	return(0);
-
+//if(d[i] == 0 || s[i] == 0)
+//	return(0);
 /*
 int main()
 {
-    char str1[] = "hello world";
-    char str2[] = "hello world";
+    char str1[] = "";
+    char str2[] = "";
     char destm[] = "";
     char desto[] = "";
     size_t n = 6;
