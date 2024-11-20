@@ -6,15 +6,15 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:59:51 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/19 14:01:23 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/20 10:47:48 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

@@ -1,41 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/15 16:42:41 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/20 10:49:37 by maballet         ###   ########lyon.fr   */
+/*   Created: 2024/11/19 16:42:39 by maballet          #+#    #+#             */
+/*   Updated: 2024/11/20 11:21:40 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t		i;
 	char		*dup;
 
 	i = 0;
-	dup = malloc(ft_strlen((char *)s) + 1);
-	if (dup == NULL)
-		return (NULL);
-	while (i < ft_strlen((char *)s))
+	if (ft_strlen(s) <= start)
 	{
-		dup[i] = s[i];
+		len = 0;
+	}
+	else if (ft_strlen(s) <= len + start)
+	{
+		len = ft_strlen(s) - start;
+	}
+	dup = malloc(sizeof(char) * (len + 1));
+	if (dup == 0)
+	{
+		return (NULL);
+	}
+	while (i < len && start + i < ft_strlen(s))
+	{
+		dup[i] = s[i + start];
 		i++;
 	}
 	dup[i] = '\0';
-	return (dup);
+	return ((char *)dup);
 }
-/*
-int main()
-{
-    const char  s[] = "lorem ipsum dolor sit amet";
 
-    printf("true: %s\n", strdup(s));
-    printf("mine: %s\n", ft_strdup(s));
-    return(0);
-}
-*/
+// int	main(void)
+// {
+// 	printf("%s\n", ft_substr("bonjourno", 20, 10));
+// }
