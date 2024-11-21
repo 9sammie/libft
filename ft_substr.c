@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 16:42:39 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/20 11:21:40 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/21 11:51:37 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t		i;
 	char		*dup;
+	size_t		slen;
 
 	i = 0;
-	if (ft_strlen(s) <= start)
+	slen = ft_strlen(s);
+	if (slen <= start)
 	{
 		len = 0;
 	}
-	else if (ft_strlen(s) <= len + start)
+	else if (slen <= len + start)
 	{
-		len = ft_strlen(s) - start;
+		len = slen - start;
 	}
 	dup = malloc(sizeof(char) * (len + 1));
 	if (dup == 0)
-	{
 		return (NULL);
-	}
-	while (i < len && start + i < ft_strlen(s))
+	while (i < len && start + i < slen)
 	{
 		dup[i] = s[i + start];
 		i++;
