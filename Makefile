@@ -38,7 +38,8 @@ SRC =	ft_isalpha.c \
 		ft_putnbr_fd.c \
 
 BONUS =	ft_lstnew_bonus.c \
-		ft_lstadd_front.c
+		ft_lstadd_front.c \
+		ft_lstsize.c
 
 OBJS = $(SRC:.c=.o)
 OBJS_BONUS = $(BONUS:.c=.o) $(OBJS)
