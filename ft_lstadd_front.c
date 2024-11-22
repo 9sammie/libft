@@ -1,39 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 11:57:50 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/22 18:17:48 by maballet         ###   ########lyon.fr   */
+/*   Created: 2024/11/22 19:00:48 by maballet          #+#    #+#             */
+/*   Updated: 2024/11/22 19:23:13 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	int	lenth;
-
-	lenth = 0;
-	while (s[lenth])
-		lenth++;
-	while (lenth >= 0)
-	{
-		if (s[lenth] == (char)c)
-			return ((char *)s + lenth);
-		lenth--;
-	}
-	return (NULL);
+	if (!new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
-
-// int main()
-// {
-//     int c = '\0';
-//     const char s[] = "Arc\0ane\0";
-
-//     printf("ori : %s\n", strrchr(s, c));
-//     printf("mine: %s", ft_strrchr(s, c));
-//     return(0);
-// }
