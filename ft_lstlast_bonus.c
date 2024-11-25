@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 10:03:30 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/25 17:07:04 by maballet         ###   ########lyon.fr   */
+/*   Created: 2024/11/25 08:32:47 by maballet          #+#    #+#             */
+/*   Updated: 2024/11/25 17:16:48 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstlast_bonus(t_list *lst)
 {
-	int		i;
-
-	i = 0;
-	if (!s)
+	if (lst)
 	{
-		write(2, "error", 6);
-		return ;
+		while (lst->next)
+			lst = lst->next;
 	}
-	if (fd < 0)
-		return ;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	return (lst);
 }

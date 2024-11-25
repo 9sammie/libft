@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 10:03:30 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/25 17:07:04 by maballet         ###   ########lyon.fr   */
+/*   Created: 2024/11/22 19:26:54 by maballet          #+#    #+#             */
+/*   Updated: 2024/11/25 17:16:37 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_lstsize_bonus(t_list *lst)
 {
-	int		i;
+	int	i;
 
 	i = 0;
-	if (!s)
+	while (lst)
 	{
-		write(2, "error", 6);
-		return ;
-	}
-	if (fd < 0)
-		return ;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
 		i++;
+		lst = lst->next;
 	}
+	return (i);
 }

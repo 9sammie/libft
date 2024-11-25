@@ -6,13 +6,13 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 13:34:33 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/22 19:08:25 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/25 17:16:42 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew_bonus(void *content)
 {
 	t_list	*new;
 
