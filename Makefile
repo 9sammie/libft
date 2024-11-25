@@ -42,28 +42,29 @@ BONUS =	ft_lstnew_bonus.c \
 		ft_lstadd_back_bonus.c \
 		ft_lstdelone_bonus.c \
 		ft_lstclear_bonus.c \
-		ft_lstiter_bonus.c
+		ft_lstiter_bonus.c \
+		ft_lstmap_bonus.c
 
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 HEADER = libft.h
-OBJS = $(SRC:.c=.o)
-OBJS_BONUS = $(BONUS:.c=.o) $(OBJS)
+OBJ = $(SRC:.c=.o)
+OBJ_BONUS = $(BONUS:.c=.o) $(OBJ)
 
 all: $(NAME)
 
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@ -I .
 
-$(NAME): $(OBJS) Makefile
-	ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJ) Makefile
+	ar rcs $(NAME) $(OBJ)
 
-bonus: $(OBJS_BONUS)
-	@$(MAKE) --no-print-directory OBJS="$(OBJS_BONUS)"
+bonus: $(OBJ_BONUS)
+	ar rcs $(NAME) $(OBJ_BONUS)
 
 clean:
-	rm -f $(OBJS_BONUS)
+	rm -f $(OBJ_BONUS)
 
 fclean: clean
 	rm -f $(NAME)

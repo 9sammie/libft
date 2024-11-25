@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:28:12 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/25 17:16:28 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/25 18:12:48 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,15 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-t_list	*ft_lstnew_bonus(void *content);
-void	ft_lstadd_front_bonus(t_list **lst, t_list *new);
-int		ft_lstsize_bonus(t_list *lst);
-t_list	*ft_lstlast_bonus(t_list *lst);
-void	ft_lstadd_back_bonus(t_list **lst, t_list *new);
-void	ft_lstdelone_bonus(t_list *lst, void (*del)(void *));
-void	ft_lstclear_bonus(t_list **lst, void (*del)(void *));
-void	ft_lstiter_bonus(t_list *lst, void (*f)(void *));
-t_list	*ft_lstmap_bonus(t_list *lst, void *(*f)(void *), void (*del)(void *));
+// BONUS PART
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
