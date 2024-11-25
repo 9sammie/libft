@@ -42,7 +42,8 @@ BONUS =	ft_lstnew_bonus.c \
 		ft_lstsize.c \
 		ft_lstlast.c \
 		ft_lstadd_back.c \
-		ft_lstdelone.c
+		ft_lstdelone.c \
+		ft_lstclear.c
 
 OBJS = $(SRC:.c=.o)
 OBJS_BONUS = $(BONUS:.c=.o) $(OBJS)
