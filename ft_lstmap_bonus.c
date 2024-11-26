@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:52:57 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/25 18:15:46 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 16:35:17 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 	t_list	*new_elem;
+	void	*newcontent;
 
 	new_lst = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
 	while (lst)
 	{
-		new_elem = ft_lstnew(f(lst->content));
+		newcontent = f(lst->content);
+		new_elem = ft_lstnew(newcontent);
 		if (!new_elem)
 		{
+			del(newcontent);
 			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}

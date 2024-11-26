@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:28:12 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/25 18:12:48 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/25 18:57:01 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stddef.h>
 # include <bsd/string.h>
 # include <ctype.h>
+# include <stdint.h>
 
 typedef struct s_list
 {

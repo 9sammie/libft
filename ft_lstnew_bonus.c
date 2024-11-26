@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 13:34:33 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/25 18:05:35 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 16:39:40 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,4 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
-// int	main(void)
-// {
-// 	t_list	*list;
 
-// 	list = ft_lstnew("10");
-// 	printf("%s", (char *)list->content);
-// }
