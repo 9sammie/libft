@@ -69,10 +69,10 @@ all: $(NAME)
 bonus:
 	$(MAKE) SRC="$(SRC) $(BONUS)"
 
-%.o: %.c $(HEADER)
+%.o: %.c $(HEADER) Makefile
 	$(CC) $(CFLAGS) -c $< -o $@ -I .
 
-$(NAME): $(OBJ) Makefile
+$(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 clean:
