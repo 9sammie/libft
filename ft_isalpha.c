@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:54:52 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/18 18:49:38 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 16:42:00 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,3 @@ int	ft_isalpha(int c)
 		return (1024);
 	return (0);
 }
-
-/*int     main(void)
-{
-    char    c;
-
-    c = '5';
-    printf("orig : %d\nmine : %d", isalpha(c), ft_isalpha(c));
-    return (0);
-}*/

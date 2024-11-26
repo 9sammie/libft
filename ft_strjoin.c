@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:24:17 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/20 13:25:41 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 16:43:13 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[i] = '\0';
 	return (join);
 }
-
-// int	main(void)
-// {
-// 	printf("%s", ft_strjoin("bon", "jour"));
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 18:09:17 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/22 18:58:07 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 16:41:46 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,3 @@ static long	ft_verif(long n, int sign)
 		return (-1);
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	const char	nptr[] = "    		 2147483648";
-
-// 	printf("mine: %d\ntrue: %d\n", ft_atoi(nptr), atoi(nptr));
-// 	return (0);
-// }

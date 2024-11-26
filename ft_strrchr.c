@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:57:50 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/22 18:17:48 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 16:43:37 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-//     int c = '\0';
-//     const char s[] = "Arc\0ane\0";
-
-//     printf("ori : %s\n", strrchr(s, c));
-//     printf("mine: %s", ft_strrchr(s, c));
-//     return(0);
-// }

@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:12:29 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/19 13:57:47 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 16:42:34 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// int	main(void)
-// {
-// 	char	str1[] = "123";
-// 	char	str2[] = "123";
-// 	char	destm[] = "abcd";
-// 	char	desto[] = "abcd";
-// 	size_t	n = 15;
-
-// 	printf("src     : %s\n", str1);
-// 	ft_memmove(destm, str1, n);
-// 	printf("mine    : %s\n", destm);
-// 	memmove(desto, str2, n);
-// 	printf("func    : %s\n", desto);
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:39:55 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/21 17:10:06 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 16:43:26 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (new);
 }
 
-// int	main(void)
-// {
-// 	char	*str = "059gfd5s";
-// 	char	*result;
-
-// 	result = ft_strmapi(str, ft_toupper_if_even);
-// 	printf("%s\n", result);
-// 	return (0);
-// }

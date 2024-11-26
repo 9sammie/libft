@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:25:40 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/18 19:15:14 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 16:43:49 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_toupper(int c)
 		c = c - 32;
 	return (c);
 }
-/*
-int main()
-{
-    int c = 'g';
-
-    printf("ori : %d\n", toupper(c));
-    printf("mine: %d\n", ft_toupper(c));
-    return(0);
-}
-*/

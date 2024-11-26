@@ -1,5 +1,9 @@
 .PHONY: all clean fclean re
 
+#####################################################
+#####                   files                   #####
+#####################################################
+
 SRC =	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -45,12 +49,20 @@ BONUS =	ft_lstnew_bonus.c \
 		ft_lstiter_bonus.c \
 		ft_lstmap_bonus.c
 
+#####################################################
+#####                 variables                 #####
+#####################################################
+
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 HEADER = libft.h
 OBJ = $(SRC:.c=.o)
 OBJ_BONUS = $(BONUS:.c=.o) $(OBJ)
+
+#####################################################
+#####                  commands                 #####
+#####################################################
 
 all: $(NAME)
 

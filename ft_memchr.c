@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:55:35 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/19 15:08:25 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 16:42:24 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-//     size_t n = 5;
-//     int c = 'j';
-//     const   char s[] = "bonjour";
-
-//     printf("ori : %p\n", memchr(s, c, n));
-//     printf("mine: %p\n", ft_memchr(s, c, n));
-//     return(0);
-// }
