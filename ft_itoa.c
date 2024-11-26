@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:47:04 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/26 16:42:16 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 17:52:05 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,3 @@ static int	ft_len(int n)
 	}
 	return (len);
 }
-

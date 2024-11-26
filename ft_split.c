@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:54:31 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/26 16:43:01 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 17:51:57 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,4 +94,3 @@ static size_t	ft_countword(char const *s, char c)
 	}
 	return (count);
 }
-

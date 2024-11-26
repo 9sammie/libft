@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 10:08:33 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/26 16:42:43 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2024/11/26 17:51:35 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 	c = (num % 10) + '0';
 	write(fd, &c, 1);
 }
-
