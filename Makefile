@@ -1,4 +1,4 @@
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 
 #####################################################
 #####                   files                   #####
@@ -66,14 +66,14 @@ OBJ_BONUS = $(BONUS:.c=.o) $(OBJ)
 
 all: $(NAME)
 
+bonus:
+	$(MAKE) SRC="$(SRC) $(BONUS)"
+
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@ -I .
 
 $(NAME): $(OBJ) Makefile
 	ar rcs $(NAME) $(OBJ)
-
-bonus: $(OBJ_BONUS)
-	ar rcs $(NAME) $(OBJ_BONUS)
 
 clean:
 	rm -f $(OBJ_BONUS)
