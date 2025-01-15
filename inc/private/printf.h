@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   printf.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 13:54:52 by maballet          #+#    #+#             */
-/*   Updated: 2024/11/26 16:42:11 by maballet         ###   ########lyon.fr   */
+/*   Created: 2024/11/29 14:34:26 by maballet          #+#    #+#             */
+/*   Updated: 2025/01/15 16:38:05 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef PRINTF_H
+# define PRINTF_H
 
-int	ft_isprint(int c)
-{
-	if (c >= 32 && c <= 126)
-		return (16384);
-	return (0);
-}
+# include <stdarg.h>
+# include <unistd.h>
+
+int		ft_putstr(char *s);
+int		ft_putnbr(int n);
+int		ft_putnbrbase(unsigned long n, char *base, unsigned long baselen);
+int		ft_putptr(void *ptr);
+int		ft_putchar(char c);
+int		ft_strlen(char *s);
+char	*ft_strchr(const char *s, int c);
+int		ft_check(va_list ap, int *i, const char *s);
+
+#endif
