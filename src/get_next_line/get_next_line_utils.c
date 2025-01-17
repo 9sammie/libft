@@ -6,11 +6,11 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 16:23:33 by maballet          #+#    #+#             */
-/*   Updated: 2025/01/15 16:39:43 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2025/01/15 17:08:10 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "private/get_next_line.h"
+#include "projets/get_next_line.h"
 
 char	*ft_strnjoin(char const *line, char const *buffer, size_t n)
 {

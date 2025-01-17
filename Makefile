@@ -10,6 +10,7 @@ SRC = 	src/check/ft_isalnum.c \
 		src/check/ft_isprint.c \
 \
 		src/convert/ft_atoi.c \
+		src/convert/ft_atol.c \
 		src/convert/ft_itoa.c \
 		src/convert/ft_putnbr_fd.c \
 \
@@ -34,9 +35,9 @@ SRC = 	src/check/ft_isalnum.c \
 		src/memory/ft_memmove.c \
 		src/memory/ft_memset.c \
 \
-		src/printf/ft_printf_useful_01.c \
-		src/printf/ft_printf_useful_02.c \
-		src/printf/ft_printf.c \
+		src/ft_printf/ft_printf_useful_01.c \
+		src/ft_printf/ft_printf_useful_02.c \
+		src/ft_printf/ft_printf.c \
 \
 		src/string/ft_putchar_fd.c \
 		src/string/ft_putendl_fd.c \
@@ -65,7 +66,7 @@ SRC = 	src/check/ft_isalnum.c \
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
-HEADER = inc/libft.h inc/private/printf.h inc/private/get_next_line.h
+HEADER = inc/libft.h inc/projets/ft_printf.h inc/projets/get_next_line.h
 
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))

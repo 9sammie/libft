@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_useful_01.c                              :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 16:25:44 by maballet          #+#    #+#             */
-/*   Updated: 2025/01/15 16:40:00 by maballet         ###   ########lyon.fr   */
+/*   Created: 2025/01/17 18:51:18 by maballet          #+#    #+#             */
+/*   Updated: 2025/01/17 18:58:37 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "private/printf.h"
+#include "libft.h"
 
-int	ft_strlen(char *s)
+int    ft_atol(const char *nptr)
 {
-	int	i;
+	int		i;
+	int		sign;
+	long	result;
 
 	i = 0;
-	while (s[i])
+	sign = 1;
+	result = 0;
+	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
-	return (i);
-}
-
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s)
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		if (nptr[i] == '-')
+			sign = -1;
+		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (NULL);
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		result = result * 10 + (nptr[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }

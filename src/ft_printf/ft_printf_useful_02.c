@@ -6,11 +6,11 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 16:39:34 by maballet          #+#    #+#             */
-/*   Updated: 2025/01/15 16:40:00 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2025/01/15 17:08:42 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "private/printf.h"
+#include "projets/ft_printf.h"
 
 int	ft_putstr(char *s)
 {

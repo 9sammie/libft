@@ -6,11 +6,11 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 14:08:25 by maballet          #+#    #+#             */
-/*   Updated: 2025/01/15 16:40:00 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2025/01/15 17:08:52 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "private/printf.h"
+#include "projets/ft_printf.h"
 
 int	ft_check(va_list ap, int *i, const char *s)
 {

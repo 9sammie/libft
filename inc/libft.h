@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:28:12 by maballet          #+#    #+#             */
-/*   Updated: 2025/01/15 16:39:09 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2025/01/17 18:58:43 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_printf(const char *s, ...);
 char	*get_next_line(int fd);
+int	long    ft_atol(const char *nptr);
 #endif
