@@ -10,7 +10,6 @@ SRC = 	src/check/ft_isalnum.c \
 		src/check/ft_isprint.c \
 \
 		src/convert/ft_atoi.c \
-		src/convert/ft_atol.c \
 		src/convert/ft_itoa.c \
 		src/convert/ft_putnbr_fd.c \
 \
