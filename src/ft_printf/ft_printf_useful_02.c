@@ -6,13 +6,13 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 16:39:34 by maballet          #+#    #+#             */
-/*   Updated: 2025/01/15 17:08:42 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2025/02/03 17:50:48 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "projets/ft_printf.h"
 
-int	ft_putstr(char *s)
+int	ft_putstr_printf(char *s)
 {
 	int	len;
 
@@ -22,11 +22,11 @@ int	ft_putstr(char *s)
 		len += write(1, "(null)", 6);
 		return (len);
 	}
-	write(1, s, ft_strlen(s));
-	return (ft_strlen(s));
+	write(1, s, ft_strlen_printf(s));
+	return (ft_strlen_printf(s));
 }
 
-int	ft_putnbr(int n)
+int	ft_putnbr_printf(int n)
 {
 	long	num;
 	int		len;
@@ -39,8 +39,8 @@ int	ft_putnbr(int n)
 		num = -num;
 	}
 	if (num > 9)
-		len += ft_putnbr(num / 10);
-	len += ft_putchar((num % 10) + '0');
+		len += ft_putnbr_printf(num / 10);
+	len += ft_putchar_printf((num % 10) + '0');
 	return (len);
 }
 
@@ -51,7 +51,7 @@ int	ft_putnbrbase(unsigned long n, char *base, unsigned long baselen)
 	len = 0;
 	if (n >= baselen)
 		len += ft_putnbrbase(n / baselen, base, baselen);
-	len += ft_putchar(base[n % baselen]);
+	len += ft_putchar_printf(base[n % baselen]);
 	return (len);
 }
 
@@ -70,7 +70,7 @@ int	ft_putptr(void *ptr)
 	return (len);
 }
 
-int	ft_putchar(char c)
+int	ft_putchar_printf(char c)
 {
 	write(1, &c, 1);
 	return (1);

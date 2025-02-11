@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 16:23:33 by maballet          #+#    #+#             */
-/*   Updated: 2025/01/15 17:08:10 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2025/02/03 17:57:26 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnjoin(char const *line, char const *buffer, size_t n)
 		return (NULL);
 	if (!line)
 		line = "";
-	join = malloc(sizeof(char) * (ft_strlen(line) + n + 1));
+	join = malloc(sizeof(char) * (ft_strlen_gnl(line) + n + 1));
 	if (!join)
 		return (NULL);
 	while (line[i])
@@ -38,7 +38,7 @@ char	*ft_strnjoin(char const *line, char const *buffer, size_t n)
 	return (join);
 }
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen_gnl(const char *s)
 {
 	size_t	i;
 
@@ -48,7 +48,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr_gnl(const void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*str;
@@ -66,7 +66,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-void	ft_bzero(void *s, size_t n)
+void	ft_bzero_gnl(void *s, size_t n)
 {
 	size_t	i;
 
@@ -78,7 +78,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove_gnl(void *dest, const void *src, size_t n)
 {
 	size_t				i;
 	const unsigned char	*s;

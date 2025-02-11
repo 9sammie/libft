@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 14:08:25 by maballet          #+#    #+#             */
-/*   Updated: 2025/01/15 17:08:52 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2025/02/03 17:55:31 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ int	ft_check(va_list ap, int *i, const char *s)
 
 	len = 0;
 	if (s[*i + 1] == 'c')
-		len += ft_putchar(va_arg(ap, int));
+		len += ft_putchar_printf(va_arg(ap, int));
 	else if (s[*i + 1] == 's')
-		len += ft_putstr(va_arg(ap, char *));
+		len += ft_putstr_printf(va_arg(ap, char *));
 	else if (s[*i + 1] == 'p')
 		len += ft_putptr(va_arg(ap, void *));
 	else if (s[*i + 1] == 'd' || s[*i + 1] == 'i')
-		len += ft_putnbr(va_arg(ap, int));
+		len += ft_putnbr_printf(va_arg(ap, int));
 	else if (s[*i + 1] == 'u')
 		len += ft_putnbrbase(va_arg(ap, unsigned int), "0123456789", 10);
 	else if (s[*i + 1] == 'x')
@@ -32,11 +32,11 @@ int	ft_check(va_list ap, int *i, const char *s)
 	else if (s[*i + 1] == 'X')
 		len += ft_putnbrbase(va_arg(ap, unsigned int), "0123456789ABCDEF", 16);
 	else if (s[*i + 1] == '%')
-		len += ft_putchar('%');
+		len += ft_putchar_printf('%');
 	else
 	{
-		len += ft_putchar(s[*i]);
-		len += ft_putchar(s[*i + 1]);
+		len += ft_putchar_printf(s[*i]);
+		len += ft_putchar_printf(s[*i + 1]);
 	}
 	return (len);
 }
@@ -54,7 +54,7 @@ int	ft_printf(const char *s, ...)
 		return (-1);
 	while (s[i])
 	{
-		if ((s[i] == '%' && !(ft_strchr("cspdiuxX%", s[i + 1]))) || s == 0)
+		if ((s[i] == '%' && !(ft_strchr_printf("cspdiuxX%", s[i + 1]))) || s == 0)
 			return (-1);
 		if (s[i] == '%')
 		{
@@ -62,7 +62,7 @@ int	ft_printf(const char *s, ...)
 			i++;
 		}
 		else
-			len = ft_putchar(s[i]) + len;
+			len = ft_putchar_printf(s[i]) + len;
 		i++;
 	}
 	va_end(ap);

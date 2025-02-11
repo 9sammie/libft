@@ -6,13 +6,13 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 16:25:44 by maballet          #+#    #+#             */
-/*   Updated: 2025/01/15 17:08:31 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2025/02/03 17:52:22 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "projets/ft_printf.h"
 
-int	ft_strlen(char *s)
+int	ft_strlen_printf(char *s)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	ft_strlen(char *s)
 	return (i);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr_printf(const char *s, int c)
 {
 	while (*s)
 	{

@@ -6,7 +6,7 @@
 /*   By: maballet <maballet@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 16:19:30 by maballet          #+#    #+#             */
-/*   Updated: 2025/01/15 17:00:37 by maballet         ###   ########lyon.fr   */
+/*   Updated: 2025/02/03 17:49:24 by maballet         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ char	*ft_putbuf(char *line, char *buffer)
 		return (ft_free_line(line));
 	if (buffer[n] == '\n')
 	{
-		ft_memmove(buffer, buffer + n + 1, ft_strlen(buffer + n + 1) + 1);
+		ft_memmove_gnl(buffer, buffer + n + 1, ft_strlen_gnl(buffer + n + 1) + 1);
 	}
 	else
 	{
-		ft_bzero(buffer, BUFFER_SIZE);
+		ft_bzero_gnl(buffer, BUFFER_SIZE);
 	}
 	free(line);
 	return (join);
@@ -58,7 +58,7 @@ char	*get_next_line(int fd)
 			line = ft_putbuf(line, buffer);
 			if (!line)
 				return (NULL);
-			if (line && ft_memchr(line, '\n', ft_strlen(line)))
+			if (line && ft_memchr_gnl(line, '\n', ft_strlen_gnl(line)))
 				return (line);
 		}
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
